@@ -2,14 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 3</title>
+    <title>Form</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-normalize@1/modern-normalize.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
   </head>
   <body>
-    <section>
-      <a href="./index.html">Go to home</a>
-      <h1>Welcome to page 3</h1>
-    </section>
+
+    <form class="feedback-form">
+      <label class="eMailFild">
+        Email </br>
+        <input type="email" name="email" class="emailInputFild" autofocus />
+      </label>
+      <label class="messageFild">
+        Message </br>
+        <textarea name="message" rows="1" class="textInputFild"></textarea>
+      </label>
+      <button type="submit" class="buttonSubmit">Submit</button>
+    </form>
+    <script type="module" src="../js/2-form.js"></script>
   </body>
 </html>
