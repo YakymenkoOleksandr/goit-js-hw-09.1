@@ -1,6 +1,5 @@
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
   {
@@ -71,7 +70,7 @@ const images = [
 const gallery = document.querySelector('.gallery');
 const allPictures = document.createDocumentFragment();
 
-const blockOfgalery = (image) => {
+const blockOfgalery = image => {
   const tagLi = document.createElement('li');
   tagLi.classList.add('gallery-item');
   const tagA = document.createElement('a');
@@ -85,16 +84,19 @@ const blockOfgalery = (image) => {
   tagA.append(tagImg);
   tagLi.appendChild(tagA);
   return tagLi;
-}
+};
 
 for (const image of images) {
-const galleryItem = blockOfgalery(image);
+  const galleryItem = blockOfgalery(image);
   allPictures.appendChild(galleryItem);
- };
+}
 
 gallery.appendChild(allPictures);
 
 var lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
+  captionsData: 'alt',
+  captionDelay: 250,
+  overlayOpacity: 0.9,
+  widthRatio: 0.7,
+  heightRatio: 0.7,
 });
